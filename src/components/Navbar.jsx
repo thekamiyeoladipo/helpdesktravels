@@ -17,7 +17,7 @@ export default function Navbar() {
       : "text-gray-700 hover:text-blue-600";
 
   return (
-    <nav className="bg-white shadow-sm px-6 py-4 flex items-center justify-between relative">
+    <nav className="bg-white shadow-sm px-6 py-4 flex items-center justify-between relative z-20">
       <h1 className="text-2xl font-bold text-blue-600">TravelX</h1>
 
       <button
@@ -54,7 +54,7 @@ export default function Navbar() {
 
       <div
         id="mobile-navigation"
-        className={`absolute top-full left-0 w-full bg-white shadow-md md:hidden transition-all duration-300 ease-in-out transform ${
+        className={`absolute top-full left-0 w-full bg-white shadow-md md:hidden transition-all duration-300 ease-in-out transform z-10 ${
           isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0 pointer-events-none"
         }`}
       >

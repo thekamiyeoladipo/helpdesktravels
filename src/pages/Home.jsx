@@ -1,6 +1,7 @@
 import FlagMarquee from "../components/FlagMarquee";
 import { useEffect, useState } from "react";
 
+
 const heroSlides = [
   {
     image: "/images/safari.jpg",

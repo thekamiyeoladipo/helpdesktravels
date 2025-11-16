@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-sm px-6 py-4 flex items-center justify-between relative z-20">
-      <h1 className="text-2xl font-bold text-blue-600">TravelX</h1>
+      <h1 className="text-2xl font-bold text-blue-600">Helpdesk Travels & Tours</h1>
 
       <button
         type="button"

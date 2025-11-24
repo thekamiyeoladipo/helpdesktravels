@@ -140,7 +140,7 @@ export default function FlagMarquee() {
     <section className="w-full bg-white py-10 border-y border-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <p className="text-center text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-gray-500">
-          Trusted By Travelers Worldwide
+          Travel the world with us
         </p>
         <div className="relative mt-8 overflow-hidden">
           <div className="flex gap-4 sm:gap-6 w-max animate-marquee">

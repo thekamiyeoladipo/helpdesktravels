@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import TopBar from "./components/TopBar";
+import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Destinations from "./pages/Destinations";
@@ -10,14 +9,14 @@ import NotFound from "./pages/NotFound";
 function App() {
   return (
     <Router>
-      <TopBar />
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/destinations" element={<Destinations />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
+        <Route element={<Layout />}>
+          <Route path="/about" element={<About />} />
+          <Route path="/destinations" element={<Destinations />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </Router>
   );

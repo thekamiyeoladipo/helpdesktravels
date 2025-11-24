@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import TopBar from "../components/TopBar";
+import Navbar from "../components/Navbar";
 import FlagMarquee from "../components/FlagMarquee";
 import bg1 from "../assets/images/bg1.jpg";
 import bg2 from "../assets/images/bg2.jpg";
@@ -34,7 +36,7 @@ export default function Home() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 2000);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -43,7 +45,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden bg-gray-900 text-white">
+      <section className="relative overflow-hidden text-white">
         {heroSlides.map((slide, index) => (
           <div
             key={slide.id}
@@ -54,13 +56,17 @@ export default function Home() {
             aria-hidden={index !== activeSlide}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80" aria-hidden />
-        <div className="relative z-10 px-6 py-12 text-center">
-          <span className="text-xs sm:text-sm font-semibold tracking-[0.3em] uppercase text-white/80">
-            {currentSlide.label}
-          </span>
-          <h2 className="mt-4 text-4xl md:text-5xl font-semibold">{currentSlide.title}</h2>
-          <p className="mt-4 text-lg max-w-2xl mx-auto text-white/90">{currentSlide.description}</p>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" aria-hidden />
+        <div className="relative z-10 flex flex-col min-h-[90vh] md:min-h-screen">
+          <TopBar variant="hero" />
+          <Navbar variant="hero" />
+          <div className="flex flex-col flex-1 items-center justify-center px-6 py-12 text-center">
+            <span className="text-xs sm:text-sm font-semibold tracking-[0.3em] uppercase text-white/80">
+              {currentSlide.label}
+            </span>
+            <h2 className="mt-4 text-4xl md:text-5xl font-semibold">{currentSlide.title}</h2>
+            <p className="mt-4 text-lg max-w-2xl mx-auto text-white/90">{currentSlide.description}</p>
+          </div>
         </div>
       </section>
       <FlagMarquee />

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import TopBar from "../components/TopBar";
 import Navbar from "../components/Navbar";
 import FlagMarquee from "../components/FlagMarquee";
+import Footer from "../components/Footer";
 import bg1 from "../assets/images/bg1.jpg";
 import bg2 from "../assets/images/bg2.jpg";
 import bg3 from "../assets/images/bg3.jpg";
@@ -277,6 +278,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
